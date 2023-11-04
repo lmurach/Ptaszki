@@ -2,16 +2,6 @@ html {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
 html {
   position: relative;
   min-height: 100%;
@@ -19,4 +9,53 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-item {
+    display: inline-block;
+    font-size: 18pt;
+    line-height: 40px;
+    text-align: left;
+    padding: 0 10px;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.title-bar {
+    position: relative;
+}
+
+#user-info {
+    position: absolute;
+    width: 160px;
+    top: 10px;
+    left: 10px; 
+     
+    padding: 5px;
+    background-color: white;
+    border: 2px solid red;
+}
+
+.avatar-container {
+    width: 100px;
+    margin: auto;
+}
+
+#user-info-username {
+    font-size: 16pt;
+    font-weight: 400;
+    text-align: center;
+}
+
+#seed-img {
+    float: left;
 }

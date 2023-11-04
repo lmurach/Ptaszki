@@ -1,16 +1,24 @@
 {
   "Files": [
     {
-      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Ptaszki.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Ptaszki.bundle.scp.css"
-    },
-    {
       "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\bird_avatars\\1.jpg"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\seed.jpg",
+      "PackagePath": "staticwebassets\\images\\site\\seed.jpg"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\title.jpg",
+      "PackagePath": "staticwebassets\\images\\site\\title.jpg"
     },
     {
       "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\js\\site.js",

@@ -20,9 +20,7 @@ Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\staticwebassets\msbuild.
 Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\staticwebassets.pack.json
 Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\staticwebassets.build.json
 Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\staticwebassets.development.json
-Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\scopedcss\bundle\Ptaszki.styles.css
-Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\scopedcss\projectbundle\Ptaszki.bundle.scp.css
 Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\Ptaszki.dll
 Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\refint\Ptaszki.dll
 Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\Ptaszki.pdb

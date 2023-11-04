@@ -4,23 +4,35 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Ptaszki</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Ptaszki.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <div class="title-bar">
+                <img src="~/images/site/title.jpg" id="background-image" width=100%>
+                <div id="user-info">
+                    <div class=avatar-container>
+                        <img src="~/images/bird_avatars/1.jpg" id="user-avatar">
+                        <div id="user-info-username">USERNAME</div>
+                    </div>
+                    <img src="~/images/site/seed.jpg" id="seed-img">
+                    <div id="user-info-money">MONEY HERE</div>
+                </div>
+            </div>
+        </div>
+        <nav>
             <div class="container">
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a href=~/Index>Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href=~/Login>Login</a>
-                        </li>
-                    </ul>
+                <div class="navbar-nav">
+                    <div class="nav-item">
+                        <a href=~/Adopt>Adopt</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href=~/View_Birds>View Birds</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href=~/Crafting>Crafting</a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -36,11 +48,5 @@
             &copy; 2023 - Ptaszki - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
