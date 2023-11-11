@@ -26,3 +26,4 @@ Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\refint\Ptaszki.dll
 Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\Ptaszki.pdb
 Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\Ptaszki.genruntimeconfig.cache
 Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\ref\Ptaszki.dll
+Y:\School\Internet Programming\Ptaszki\obj\Debug\net7.0\Ptaszki.csproj.AssemblyReference.cache
