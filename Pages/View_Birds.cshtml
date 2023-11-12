@@ -1,0 +1,21 @@
+﻿@page
+@model ViewBirdsModel
+@{
+    ViewData["Title"] = "View Birds";
+}
+
+<div class="view-birds-grid">
+    @foreach (var bird in Model.ListOfBirds) {
+        <div class="view-bird-entry vb-rarity-@(bird.Rarity)">
+            <div class="vb-img-container">
+                <img class="vb-img" src="~/images/bird_avatars/@(bird.ID).jpg">
+            </div>
+            <div class="vb-entry-name">@(bird.Name)</div>
+            <div class="vb-entry-stats-container">
+                <div class="vb-entry-stat">@(bird.Strength)</div>
+                <div class="vb-entry-stat">@(bird.Perception)</div>
+                <div class="vb-entry-stat">@(bird.Hunting)</div>
+            </div>
+        </div>
+    }
+</div>

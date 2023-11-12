@@ -3,8 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Ptaszki</title>
+    <title>@ViewData["Title"] - BirdGame</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BirdGame.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script> 
+    @RenderSection("Head", false)
 </head>
 <body>
     <header>
@@ -13,19 +16,25 @@
                 <img src="~/images/site/title.jpg" id="background-image" width=100%>
                 <div id="user-info">
                     <div class=avatar-container>
-                        <img src="~/images/bird_avatars/1.jpg" id="user-avatar">
+                        <img src="~/images/bird_avatars/1.jpg" id="user-avatar" width=100px height=100px>
                         <div id="user-info-username">USERNAME</div>
                     </div>
                     <img src="~/images/site/seed.jpg" id="seed-img">
-                    <div id="user-info-money">MONEY HERE</div>
+                    <div id="user-info-money">MONEY</div>
                 </div>
             </div>
         </div>
         <nav>
-            <div class="container">
+            <div class="container nav-container">
                 <div class="navbar-nav">
                     <div class="nav-item">
+                        <a href=~/Index>Home</a>
+                    </div>
+                    <div class="nav-item">
                         <a href=~/Adopt>Adopt</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href=~/Jobs>Assign Jobs</a>
                     </div>
                     <div class="nav-item">
                         <a href=~/View_Birds>View Birds</a>
@@ -37,10 +46,14 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="container body-container">
+        <div class="body-inner-container ">
+            <main role="main">
+                <div class="body-div">
+                    @RenderBody()
+                </div>
+            </main>
+        </div>  
     </div>
 
     <footer class="border-top footer text-muted">
@@ -48,5 +61,7 @@
             &copy; 2023 - Ptaszki - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
+
+    @RenderSection("Scripts", false)
 </body>
 </html>

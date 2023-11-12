@@ -1,12 +1,20 @@
 {
   "Files": [
     {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BirdGame.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BirdGame.bundle.scp.css"
+    },
+    {
       "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\0.jpg",
+      "PackagePath": "staticwebassets\\images\\bird_avatars\\0.jpg"
     },
     {
       "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\1.jpg",
@@ -253,20 +261,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ptaszki.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BirdGame.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Ptaszki.props",
-      "PackagePath": "build\\Ptaszki.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BirdGame.props",
+      "PackagePath": "build\\BirdGame.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Ptaszki.props",
-      "PackagePath": "buildMultiTargeting\\Ptaszki.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BirdGame.props",
+      "PackagePath": "buildMultiTargeting\\BirdGame.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Ptaszki.props",
-      "PackagePath": "buildTransitive\\Ptaszki.props"
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BirdGame.props",
+      "PackagePath": "buildTransitive\\BirdGame.props"
     }
   ],
   "ElementsToRemove": []

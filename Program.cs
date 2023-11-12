@@ -1,7 +1,12 @@
-using Ptaszki.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-
+using BirdGame.Data;
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("BirdDbContextConnection") ?? throw new InvalidOperationException("Connection string 'BirdDbContextConnection' not found.");
+
+builder.Services.AddDbContext<BirdDbContext>(options => options.UseSqlite(connectionString));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<BirdDbContext>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();

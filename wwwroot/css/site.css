@@ -8,12 +8,36 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    font-size: 1.4rem;
+    margin-bottom: 60px;
+    background-color: #1B1725;
+    font-family: open sans,arial,sans-serif;
 }
 
 .container {
+    border: 0;
+    padding: 1px 0;
     max-width: 1000px;
     margin: auto;
+}
+
+.nav-container {
+    background-color: #F0A202;
+}
+
+.body-container {
+    background-color: #534B62;
+}
+
+.body-inner-container {
+    width: 800px;
+    margin: auto;
+}
+
+.body-div {
+    background-color: #E8E9EB;
+    padding: 0 10px;
+    border-radius: 0.2em;
 }
 
 nav a {
@@ -52,10 +76,42 @@ nav a {
 
 #user-info-username {
     font-size: 16pt;
-    font-weight: 400;
+    font-weight: 600;
     text-align: center;
 }
 
 #seed-img {
     float: left;
+}
+
+/* View Birds */
+.view-birds-grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 10px;
+}
+
+.view-bird-entry {
+    border-style: solid;
+    border-radius: 0.2em;
+    border-width: thick;
+}
+
+.vb-rarity-0 {
+    background-color: bisque;
+    border-color: lightslategray;
+}
+
+.vb-img {
+    display: flex;
+    justify-content: center;
+}
+
+.vb-img-container {
+    max-width: 300px;
+    margin: auto;
+}
+
+.view-entry-stat {
+    display: inline-block;
 }
