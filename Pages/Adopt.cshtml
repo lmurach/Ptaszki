@@ -6,13 +6,45 @@
 
 <link rel="stylesheet" href="~/css/adopt.css" asp-append-version="true" />
 
-<div>
-
-</div>
-<div>
-    @for(int i = 0; i < 8; i++) {
-        <div>
-
+<div class="adopt-game-wrapper">
+    @for (int i = 0; i < 3; i++) {
+        <div class="adopt-entry rarity-0">
+            <img class="adopt-img" src="">
+            <div class="adopt-name"><h2>Bird Name</h2></div>
+            <div class="adopt-stats">
+                <ul>
+                    <li>
+                        <img class="stat-img" src="~/images/site/strength.png">
+                        Strength: 1
+                    </li>
+                    <li>
+                        <img class="stat-img" src="~/images/site/perception.png">
+                        Perception: 1
+                    </li>
+                    <li>
+                        <img class="stat-img" src="~/images/site/hunting.png">
+                        Hunting: 1
+                    </li>
+                </ul>
+            </div>
+            <div class="adopt-description">bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird bird </div>
+            <button>Adopt</button>
         </div>
     }
+</div>
+<div class="side-shop-bar-wrapper">
+    <div class="side-shop-bar">
+        @for(int i = 0; i < 7; i++) {
+            <div class="side-shop-entry">
+                <img class="side-shop-img" src="">
+            </div>
+        }
+    </div>
+    <div class="side-shop-reroll">
+        <button>Reroll</button>
+        <div class="reroll-price">
+            <img class="seed-img" src="~/images/site/seed.jpg">
+            <div class="ss-reroll">2</div>
+        </div>
+    </div>
 </div>

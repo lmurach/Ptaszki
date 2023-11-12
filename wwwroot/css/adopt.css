@@ -1,0 +1,54 @@
+.adopt-entry {
+    height: 150px;
+    border-radius: 0.2rem;
+    border-style: solid;
+    border-width: thick;
+    margin: 20px 0px;
+}
+.adopt-img {
+    height: 150px;
+    width: 150px;
+    float: left;
+    margin-right: 20px;
+}
+
+.adopt-name {
+    margin-bottom: 5px;
+}
+
+.adopt-stats {
+    float: left;
+    padding-right: 30px;
+}
+
+.adopt-description {
+    float: left;
+    width: 300px;
+    padding-right: 30px;
+}
+
+.side-shop-bar-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-shop-bar {
+    width: 650px;
+    display: flex;
+    justify-content: space-around; 
+}
+
+.side-shop-img {
+    width: 70px;
+    height: 70px;
+}
+
+.side-shop-reroll {
+    float: right;
+    width: 100px;
+}
+
+.reroll-price {
+    display: flex;
+}

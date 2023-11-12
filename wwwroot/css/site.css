@@ -13,6 +13,24 @@ body {
     background-color: #1B1725;
     font-family: open sans,arial,sans-serif;
 }
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+button {
+    width: 70px;
+    height: 40px;
+}
 
 .container {
     border: 0;
@@ -83,7 +101,13 @@ nav a {
 }
 
 .seed-img {
+    width: 20px;
     float: left;
+    padding-right: 8px;
+}
+
+.stat-img {
+    width: 20px;
 }
 
 /* View Birds */
