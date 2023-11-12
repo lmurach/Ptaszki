@@ -57,8 +57,20 @@
       "PackagePath": "staticwebassets\\images\\bird_avatars\\9.jpg"
     },
     {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\hunting.png",
+      "PackagePath": "staticwebassets\\images\\site\\hunting.png"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\perception.png",
+      "PackagePath": "staticwebassets\\images\\site\\perception.png"
+    },
+    {
       "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\seed.jpg",
       "PackagePath": "staticwebassets\\images\\site\\seed.jpg"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\strength.png",
+      "PackagePath": "staticwebassets\\images\\site\\strength.png"
     },
     {
       "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\title.jpg",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oDZLjgY2zyKT8MVfV5X9gy53C3TAQfdHc8aWvR3MELc=",
+  "Hash": "1tgV/0WAaSEACjlrHzqiIvhVLse/KrFmQIFxpSTsvSY=",
   "Source": "BirdGame",
   "BasePath": "_content/BirdGame",
   "Mode": "Default",
@@ -1292,6 +1292,40 @@
       "OriginalItemSpec": "wwwroot\\images\\bird_avatars\\9.jpg"
     },
     {
+      "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\hunting.png",
+      "SourceId": "BirdGame",
+      "SourceType": "Discovered",
+      "ContentRoot": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\",
+      "BasePath": "_content/BirdGame",
+      "RelativePath": "images/site/hunting.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\site\\hunting.png"
+    },
+    {
+      "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\perception.png",
+      "SourceId": "BirdGame",
+      "SourceType": "Discovered",
+      "ContentRoot": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\",
+      "BasePath": "_content/BirdGame",
+      "RelativePath": "images/site/perception.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\site\\perception.png"
+    },
+    {
       "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\seed.jpg",
       "SourceId": "BirdGame",
       "SourceType": "Discovered",
@@ -1307,6 +1341,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\site\\seed.jpg"
+    },
+    {
+      "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\strength.png",
+      "SourceId": "BirdGame",
+      "SourceType": "Discovered",
+      "ContentRoot": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\",
+      "BasePath": "_content/BirdGame",
+      "RelativePath": "images/site/strength.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\site\\strength.png"
     },
     {
       "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\title.jpg",

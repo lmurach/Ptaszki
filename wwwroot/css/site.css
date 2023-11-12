@@ -36,7 +36,8 @@ body {
 
 .body-div {
     background-color: #E8E9EB;
-    padding: 0 10px;
+    margin: 10px 0;
+    padding: 10px;
     border-radius: 0.2em;
 }
 
@@ -60,13 +61,14 @@ nav a {
 
 #user-info {
     position: absolute;
-    width: 160px;
+    width: 180px;
     top: 10px;
     left: 10px; 
      
     padding: 5px;
     background-color: white;
     border: 2px solid red;
+    border-width: thick;
 }
 
 .avatar-container {
@@ -80,38 +82,38 @@ nav a {
     text-align: center;
 }
 
-#seed-img {
+.seed-img {
     float: left;
 }
 
 /* View Birds */
-.view-birds-grid {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 10px;
+
+.rarity-0 {
+    background-color: #AFA8A2;
+    border-color: #7B7067;
+    color: #42372B
 }
 
-.view-bird-entry {
-    border-style: solid;
-    border-radius: 0.2em;
-    border-width: thick;
+.rarity-1 {
+    background-color: #BACAA1;
+    border-color: #81A463;
+    color: #406340
 }
 
-.vb-rarity-0 {
-    background-color: bisque;
-    border-color: lightslategray;
+.rarity-2 {
+    background-color: #ABCED1;
+    border-color: #589BAF;
+    color: #264667
 }
 
-.vb-img {
-    display: flex;
-    justify-content: center;
+.rarity-3 {
+    background-color: #B5ABD1;
+    border-color: #8D69BD;
+    color: #4F3D60
 }
 
-.vb-img-container {
-    max-width: 300px;
-    margin: auto;
-}
-
-.view-entry-stat {
-    display: inline-block;
+.rarity-4 {
+    background-color: #D9C398;
+    border-color: #E4984D;
+    color: #AC462B
 }

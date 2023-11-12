@@ -1,0 +1,32 @@
+.view-birds-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 5px;
+}
+
+.view-bird-entry {
+    margin: 5px 0;
+    width: 92%;
+    border-style: solid;
+    border-radius: 0.2em;
+    border-width: thick;
+    justify-self: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.vb-img {
+    border-radius: 0.2em;
+}
+
+.vb-img-container {
+    max-width: 200px;
+    margin: auto;
+    padding: 10px;
+}
+
+.vb-entry-stats-container {
+    display: flex;
+    justify-content: space-evenly;
+}
