@@ -20,4 +20,5 @@ public class BirdDbContext : IdentityDbContext<IdentityUser>
     }
 
     public DbSet<Bird> Birds { get; set; }
+    // public DbSet<UserGame> UserGames { get; set; } 
 }

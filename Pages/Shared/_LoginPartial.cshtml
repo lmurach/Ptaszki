@@ -5,21 +5,22 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <li>
-        <a href="~/Identity/Account/Manage/">Hello @UserManager.GetUserName(User)!</a>
-    </li>
-    <li>
-        <form id="logoutForm" method="post" action="~/Identity/Account/Logout" style="display:inline">
-            <a href="#" onclick="document.querySelector('#logoutForm').submit();return false;">Logout</a>
-        </form>
-    </li>
+    <div id="user-info">
+        <div class=avatar-container>
+            <img src="~/images/bird_avatars/1.jpg" id="user-avatar" width=100px height=100px>
+        </div>
+        <div id="user-info-username">@UserManager.GetUserName(User)</div>
+        <img src="~/images/site/seed.jpg" class="seed-img">
+        <div id="user-info-money">MONEY</div>
+        <div><a href="~/Identity/Account/Logout/">Logout</a></div>
+    </div>
 }
 else
 {
-    <li>
-        <a href="~/Identity/Account/Register/">Register</a>
-    </li>
-    <li>
-        <a href="~/Identity/Account/Login/">Login</a>
-    </li>
+    <div id="user-info">
+        <div class=avatar-container>
+            <img src="~/images/bird_avatars/1.jpg" id="user-avatar" width=100px height=100px>
+        </div>
+        <div><a href="~/Identity/Account/Login/">Login</a></div>
+    </div>
 }
