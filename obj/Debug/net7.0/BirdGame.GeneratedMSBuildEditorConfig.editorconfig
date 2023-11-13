@@ -48,8 +48,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRvcHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[Y:/School/Internet Programming/Ptaszki/Pages/Crafting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JhZnRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [Y:/School/Internet Programming/Ptaszki/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[Y:/School/Internet Programming/Ptaszki/Pages/Jobs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSm9icy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [Y:/School/Internet Programming/Ptaszki/Pages/Shared/_LoginPartial.cshtml]

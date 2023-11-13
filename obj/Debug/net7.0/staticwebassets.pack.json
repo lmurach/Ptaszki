@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\css\\adopt.css"
     },
     {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\crafting.css",
+      "PackagePath": "staticwebassets\\css\\crafting.css"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\jobs.css",
+      "PackagePath": "staticwebassets\\css\\jobs.css"
+    },
+    {
       "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

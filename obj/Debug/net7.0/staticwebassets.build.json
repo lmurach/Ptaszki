@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wyywz5b8mqA3AA7ttb4A0myEG0567fy4BS9vUqAtWTk=",
+  "Hash": "yaBFbudEdbxfxYyYeQ/zh5gTtMBORGIGQIGUYrpC07E=",
   "Source": "BirdGame",
   "BasePath": "_content/BirdGame",
   "Mode": "Default",
@@ -1086,6 +1086,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\adopt.css"
+    },
+    {
+      "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\crafting.css",
+      "SourceId": "BirdGame",
+      "SourceType": "Discovered",
+      "ContentRoot": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\",
+      "BasePath": "_content/BirdGame",
+      "RelativePath": "css/crafting.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\crafting.css"
+    },
+    {
+      "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\jobs.css",
+      "SourceId": "BirdGame",
+      "SourceType": "Discovered",
+      "ContentRoot": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\",
+      "BasePath": "_content/BirdGame",
+      "RelativePath": "css/jobs.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\jobs.css"
     },
     {
       "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\site.css",
