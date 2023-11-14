@@ -5,3 +5,68 @@
 }
 
 <link rel="stylesheet" href="~/css/jobs.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/view_birds.css" asp-append-version="true" />
+
+<div class="body-div">
+    <div class="job-birds-wrapper">
+        <div class="job-birds-bar">
+            @for(int i = 0; i < 5; i++) {
+
+                <div class="job-birds-entry">
+                    <img class="job-bird-img" src="">
+                    <div class="job-dropdowns">
+                        <label for="job-titles">Choose job:</label> 
+                        <select name="job-titles" id="job-titles"> 
+                            <option value="seed-collector">Seed collector</option> 
+                            <option value="hunter">Hunter</option> 
+                            <option value="miner">Miner</option> 
+                            <option value="gatherer">Gatherer</option> 
+                        </select>
+                    </div>
+                    <div>+ Stat</div>   
+                </div>
+            }
+        </div>
+        <div class="button-container">
+            <button class="job-submit-button">Submit</button>
+        </div>
+    </div>
+</div>
+<div class="body-div">
+    <div class="yeild-box"
+        <h2 class="yeild-text">Yeilds:</h2>
+        <div class="output-text">
+            <p>The northern cardinal gathers 3 sticks and 1 rock.</p>
+            <p>The northern cardinal gathers 3 sticks and 1 rock.</p>
+            <p>The northern cardinal gathers 3 sticks and 1 rock.</p>
+            <p>The northern cardinal gathers 3 sticks and 1 rock.</p>
+            <p>The northern cardinal gathers 3 sticks and 1 rock.</p>
+        </div>
+    </div>   
+</div>
+<div class="body-div">
+    <div class="view-birds-grid">
+        @foreach (var bird in Model.OwnedBirds) {
+            <div class="view-bird-entry rarity-@(bird.Rarity)">
+                <div class="vb-img-container">
+                    <img class="vb-img" src="~/images/bird_avatars/@(bird.ID).jpg">
+                </div>
+                <div class="vb-entry-name">@(bird.Name)</div>
+                <div class="vb-entry-stats-container">
+                    <div class="vb-entry-stat">
+                        <img class="stat-img" src="~/images/site/strength.png">
+                        @(bird.Strength)
+                        </div>
+                    <div class="vb-entry-stat">
+                        <img class="stat-img" src="~/images/site/perception.png">
+                        @(bird.Perception)
+                    </div>
+                    <div class="vb-entry-stat">
+                        <img class="stat-img" src="~/images/site/hunting.png">
+                        @(bird.Hunting)
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
