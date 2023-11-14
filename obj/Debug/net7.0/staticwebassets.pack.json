@@ -1,147 +1,147 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BirdGame.bundle.scp.css",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BirdGame.bundle.scp.css",
       "PackagePath": "staticwebassets\\BirdGame.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\css\\adopt.css",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\adopt.css",
       "PackagePath": "staticwebassets\\css\\adopt.css"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\css\\crafting.css",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\crafting.css",
       "PackagePath": "staticwebassets\\css\\crafting.css"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\css\\jobs.css",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\jobs.css",
       "PackagePath": "staticwebassets\\css\\jobs.css"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\css\\site.css",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\css\\view_birds.css",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\css\\view_birds.css",
       "PackagePath": "staticwebassets\\css\\view_birds.css"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\favicon.ico",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\0.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\0.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\0.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\1.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\1.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\1.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\10.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\10.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\10.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\2.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\2.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\3.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\3.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\4.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\4.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\4.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\5.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\5.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\6.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\6.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\6.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\7.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\7.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\7.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\8.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\8.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\8.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\bird_avatars\\9.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\9.jpg",
       "PackagePath": "staticwebassets\\images\\bird_avatars\\9.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\site\\hunting.png",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\hunting.png",
       "PackagePath": "staticwebassets\\images\\site\\hunting.png"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\site\\perception.png",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\perception.png",
       "PackagePath": "staticwebassets\\images\\site\\perception.png"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\site\\seed.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\seed.jpg",
       "PackagePath": "staticwebassets\\images\\site\\seed.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\site\\strength.png",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\strength.png",
       "PackagePath": "staticwebassets\\images\\site\\strength.png"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\images\\site\\title.jpg",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\title.jpg",
       "PackagePath": "staticwebassets\\images\\site\\title.jpg"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\js\\site.js",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

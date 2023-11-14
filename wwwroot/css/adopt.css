@@ -1,13 +1,13 @@
 .adopt-entry {
-    height: 150px;
+    height: 130px;
     border-radius: 0.2rem;
     border-style: solid;
     border-width: thick;
     margin: 20px 0px;
 }
 .adopt-img {
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
     float: left;
     margin-right: 20px;
 }
@@ -22,13 +22,13 @@
 }
 
 .adopt-description {
+    font-size: 1.1rem;
     float: left;
     width: 300px;
     padding-right: 30px;
 }
 
 .side-shop-bar-wrapper {
-    margin-top: 30px;
     display: flex;
     justify-content: space-between;
 }

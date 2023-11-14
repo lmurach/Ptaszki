@@ -11,16 +11,17 @@
     <div class="job-birds-wrapper">
         <div class="job-birds-bar">
             @for(int i = 0; i < 5; i++) {
-
                 <div class="job-birds-entry">
-                    <img class="job-bird-img" src="">
+                    <img class="job-bird-img" src="~/images/bird_avatars/null.jpg">
                     <div class="job-dropdowns">
                         <label for="job-titles">Choose job:</label> 
                         <select name="job-titles" id="job-titles"> 
                             <option value="seed-collector">Seed collector</option> 
                             <option value="hunter">Hunter</option> 
-                            <option value="miner">Miner</option> 
+                            <option value="rock-breaker">Rock Breaker</option> 
                             <option value="gatherer">Gatherer</option> 
+                            <option value="feather-fetcher">Feather Fetcher</option>
+                            <option value="bug-finder">Bug Finder</option> 
                         </select>
                     </div>
                     <div>+ Stat</div>   
@@ -56,7 +57,7 @@
                     <div class="vb-entry-stat">
                         <img class="stat-img" src="~/images/site/strength.png">
                         @(bird.Strength)
-                        </div>
+                    </div>
                     <div class="vb-entry-stat">
                         <img class="stat-img" src="~/images/site/perception.png">
                         @(bird.Perception)

@@ -9,97 +9,97 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BirdGame
 build_property.RootNamespace = BirdGame
-build_property.ProjectDir = C:\Users\rke_m\Desktop\school\IP\Ptaszki\
+build_property.ProjectDir = Y:\School\Internet Programming\Ptaszki\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\rke_m\Desktop\school\IP\Ptaszki
+build_property.MSBuildProjectDirectory = Y:\School\Internet Programming\Ptaszki
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Areas/Identity/Pages/Account/Login.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Areas/Identity/Pages/Account/Logout.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Areas/Identity/Pages/Account/Register.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Areas/Identity/Pages/_ViewImports.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Areas/Identity/Pages/_ViewStart.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Admin/Birds/Create.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Admin/Birds/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmlyZHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Admin/Birds/Delete.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Admin/Birds/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmlyZHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Admin/Birds/Details.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Admin/Birds/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmlyZHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Admin/Birds/Edit.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Admin/Birds/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmlyZHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Admin/Birds/Index.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Admin/Birds/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmlyZHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Adopt.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Adopt.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRvcHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Crafting.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Crafting.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JhZnRpbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Index.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Jobs.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Jobs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSm9icy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Shared/_LoginPartial.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/View_Birds.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/View_Birds.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld19CaXJkcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/_ViewImports.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/_ViewStart.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rke_m/Desktop/school/IP/Ptaszki/Pages/Shared/_Layout.cshtml]
+[Y:/School/Internet Programming/Ptaszki/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-v2hq5qhxcz
