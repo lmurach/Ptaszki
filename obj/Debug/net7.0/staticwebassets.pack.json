@@ -73,6 +73,30 @@
       "PackagePath": "staticwebassets\\images\\bird_avatars\\9.jpg"
     },
     {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\null.jpg",
+      "PackagePath": "staticwebassets\\images\\bird_avatars\\null.jpg"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\items\\caterpiller.png",
+      "PackagePath": "staticwebassets\\images\\items\\caterpiller.png"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\items\\feather.png",
+      "PackagePath": "staticwebassets\\images\\items\\feather.png"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\items\\rock.png",
+      "PackagePath": "staticwebassets\\images\\items\\rock.png"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\items\\sticks.png",
+      "PackagePath": "staticwebassets\\images\\items\\sticks.png"
+    },
+    {
+      "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\items\\upgrade_1.png",
+      "PackagePath": "staticwebassets\\images\\items\\upgrade_1.png"
+    },
+    {
       "Id": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\site\\hunting.png",
       "PackagePath": "staticwebassets\\images\\site\\hunting.png"
     },

@@ -4,18 +4,19 @@ namespace BirdGame.Data;
 
 public class Bird
 {
-    public int ID { get; set; }
     [Key]
+    public int Id { get; set; }
 
-    public string Name { get; set; } = default!;
     [Required]
     [MaxLength(100)]
-
+    public string Name { get; set; } = default!;
+    
+    [Required]
     public int Rarity { get; set; }
 
-    public string Description { get; set; } = default!;
     [Required]
     [MaxLength(500)]
+    public string Description { get; set; } = default!;
 
     public int Strength { get; set; }
     public int Perception { get; set; }

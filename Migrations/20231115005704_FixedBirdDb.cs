@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BirdGame.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateBirdTables : Migration
+    public partial class FixedBirdDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -54,17 +54,31 @@ namespace BirdGame.Migrations
                 name: "Birds",
                 columns: table => new
                 {
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
-                    ID = table.Column<int>(type: "INTEGER", nullable: false),
-                    Rarity = table.Column<int>(type: "INTEGER", maxLength: 100, nullable: false),
-                    Description = table.Column<string>(type: "TEXT", nullable: false),
-                    Strength = table.Column<int>(type: "INTEGER", maxLength: 500, nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
+                    Rarity = table.Column<int>(type: "INTEGER", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", maxLength: 500, nullable: false),
+                    Strength = table.Column<int>(type: "INTEGER", nullable: false),
                     Perception = table.Column<int>(type: "INTEGER", nullable: false),
                     Hunting = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Birds", x => x.Name);
+                    table.PrimaryKey("PK_Birds", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserGames",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Seeds = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserGames", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -173,6 +187,32 @@ namespace BirdGame.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "BirdConnectors",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    UserGameId = table.Column<int>(type: "INTEGER", nullable: false),
+                    BirdId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BirdConnectors", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BirdConnectors_Birds_BirdId",
+                        column: x => x.BirdId,
+                        principalTable: "Birds",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_BirdConnectors_UserGames_UserGameId",
+                        column: x => x.UserGameId,
+                        principalTable: "UserGames",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -209,6 +249,16 @@ namespace BirdGame.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BirdConnectors_BirdId",
+                table: "BirdConnectors",
+                column: "BirdId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BirdConnectors_UserGameId",
+                table: "BirdConnectors",
+                column: "UserGameId");
         }
 
         /// <inheritdoc />
@@ -230,13 +280,19 @@ namespace BirdGame.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Birds");
+                name: "BirdConnectors");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Birds");
+
+            migrationBuilder.DropTable(
+                name: "UserGames");
         }
     }
 }

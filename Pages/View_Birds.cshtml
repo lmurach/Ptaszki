@@ -11,7 +11,7 @@
         @foreach (var bird in Model.ListOfBirds) {
             <div class="view-bird-entry rarity-@(bird.Rarity)">
                 <div class="vb-img-container">
-                    <img class="vb-img" src="~/images/bird_avatars/@(bird.ID).jpg">
+                    <img class="vb-img" src="~/images/bird_avatars/@(bird.Id).jpg">
                 </div>
                 <div class="vb-entry-name">@(bird.Name)</div>
                 <div class="vb-entry-stats-container">

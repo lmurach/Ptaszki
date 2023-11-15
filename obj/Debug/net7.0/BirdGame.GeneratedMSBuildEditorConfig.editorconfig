@@ -44,26 +44,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[Y:/School/Internet Programming/Ptaszki/Pages/Admin/Birds/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmlyZHNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[Y:/School/Internet Programming/Ptaszki/Pages/Admin/Birds/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmlyZHNcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[Y:/School/Internet Programming/Ptaszki/Pages/Admin/Birds/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmlyZHNcRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[Y:/School/Internet Programming/Ptaszki/Pages/Admin/Birds/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmlyZHNcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[Y:/School/Internet Programming/Ptaszki/Pages/Admin/Birds/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQmlyZHNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [Y:/School/Internet Programming/Ptaszki/Pages/Adopt.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRvcHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

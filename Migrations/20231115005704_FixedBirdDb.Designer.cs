@@ -3,6 +3,7 @@ using System;
 using BirdGame.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BirdGame.Migrations
 {
     [DbContext(typeof(BirdDbContext))]
-    partial class BirdDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231115005704_FixedBirdDb")]
+    partial class FixedBirdDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -62,22 +65,20 @@ namespace BirdGame.Migrations
                     b.Property<int>("UserGameId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("UserId")
-                        .HasColumnType("text");
-
                     b.HasKey("Id");
 
                     b.HasIndex("BirdId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserGameId");
 
                     b.ToTable("BirdConnectors");
                 });
 
             modelBuilder.Entity("BirdGame.Data.UserGame", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("text");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Seeds")
                         .HasColumnType("INTEGER");
@@ -293,7 +294,9 @@ namespace BirdGame.Migrations
 
                     b.HasOne("BirdGame.Data.UserGame", "User")
                         .WithMany("OwnedBirds")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserGameId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Bird");
 
