@@ -134,12 +134,15 @@ namespace BirdGame.Areas.Identity.Pages.Account
                         RolledSSB rolledSSB = new RolledSSB{ User = userGame};
                         _context.RolledSSBs.Add(rolledSSB);
                     }
-                    Bird nullBird = new Bird {
-                        Id = 999, 
-                        Rarity = 999, 
-                        Name="empty bird", 
-                        Description="Empty bird"
-                    };
+                    // Bird nullBird = new Bird {
+                    //     Id = 999, 
+                    //     Rarity = 999, 
+                    //     Name="empty bird", 
+                    //     Description="Empty bird"
+                    // };
+                    var nullBird = _context.Birds
+                        .Where(b => b.Id == 999)
+                        .Single();
                     for (int i = 0; i < 7; i++) {
                         SideShopBird sideShopBird = 
                             new SideShopBird{ 

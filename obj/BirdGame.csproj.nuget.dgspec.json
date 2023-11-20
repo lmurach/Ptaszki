@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "Y:\\School\\Internet Programming\\Ptaszki\\BirdGame.csproj": {}
+    "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\BirdGame.csproj": {}
   },
   "projects": {
-    "Y:\\School\\Internet Programming\\Ptaszki\\BirdGame.csproj": {
+    "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\BirdGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Y:\\School\\Internet Programming\\Ptaszki\\BirdGame.csproj",
+        "projectUniqueName": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\BirdGame.csproj",
         "projectName": "BirdGame",
-        "projectPath": "Y:\\School\\Internet Programming\\Ptaszki\\BirdGame.csproj",
-        "packagesPath": "C:\\Users\\Lauren\\.nuget\\packages\\",
-        "outputPath": "Y:\\School\\Internet Programming\\Ptaszki\\obj\\",
+        "projectPath": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\BirdGame.csproj",
+        "packagesPath": "C:\\Users\\rke_m\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rke_m\\Desktop\\school\\IP\\Ptaszki\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lauren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rke_m\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

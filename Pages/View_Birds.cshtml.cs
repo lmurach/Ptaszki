@@ -21,6 +21,7 @@ public class ViewBirdsModel : PageModel
     public async Task OnGetAsync()
     {
         this.ListOfBirds = await _context.Birds
+            .Where(b => b.Id != 999)
             .ToListAsync();
     }
 }
