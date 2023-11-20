@@ -3,6 +3,7 @@ using System;
 using BirdGame.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BirdGame.Migrations
 {
     [DbContext(typeof(BirdDbContext))]
-    partial class BirdDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231118192048_FixedBirdDb7")]
+    partial class FixedBirdDb7
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -59,6 +62,9 @@ namespace BirdGame.Migrations
                     b.Property<int>("BirdId")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("UserGameId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("UserId")
                         .HasColumnType("text");
 
@@ -69,56 +75,6 @@ namespace BirdGame.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("BirdConnectors");
-                });
-
-            modelBuilder.Entity("BirdGame.Data.RolledSSB", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("BirdId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BirdId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("RolledSSBs");
-                });
-
-            modelBuilder.Entity("BirdGame.Data.SideShopBird", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("BirdId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("SlotNum")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Star")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BirdId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("SideShopBirds");
                 });
 
             modelBuilder.Entity("BirdGame.Data.UserGame", b =>
@@ -350,44 +306,6 @@ namespace BirdGame.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("BirdGame.Data.RolledSSB", b =>
-                {
-                    b.HasOne("BirdGame.Data.Bird", "Bird")
-                        .WithMany()
-                        .HasForeignKey("BirdId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BirdGame.Data.UserGame", "User")
-                        .WithMany("RolledSSBs")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Bird");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("BirdGame.Data.SideShopBird", b =>
-                {
-                    b.HasOne("BirdGame.Data.Bird", "Bird")
-                        .WithMany()
-                        .HasForeignKey("BirdId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BirdGame.Data.UserGame", "User")
-                        .WithMany("SideShopBirds")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Bird");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -442,10 +360,6 @@ namespace BirdGame.Migrations
             modelBuilder.Entity("BirdGame.Data.UserGame", b =>
                 {
                     b.Navigation("OwnedBirds");
-
-                    b.Navigation("RolledSSBs");
-
-                    b.Navigation("SideShopBirds");
                 });
 #pragma warning restore 612, 618
         }

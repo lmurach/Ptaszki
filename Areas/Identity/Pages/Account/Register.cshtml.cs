@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading;
 using System.Threading.Tasks;
+using BirdGame.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -29,14 +30,17 @@ namespace BirdGame.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly BirdDbContext _context;
 
         public RegisterModel(
+            BirdDbContext context,
             UserManager<IdentityUser> userManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
+            _context = context;
             _userManager = userManager;
             _userStore = userStore;
             _emailStore = GetEmailStore();
@@ -97,6 +101,8 @@ namespace BirdGame.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            public int Seeds {get; set;}
         }
 
 
@@ -120,6 +126,33 @@ namespace BirdGame.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    // ***************************************
+                    // THIS PART IS AUGMENTED FOR THE BIRD DBS
+                    UserGame userGame = new UserGame {Id = user.UserName};
+                    _context.UserGames.Add(userGame);
+                    for (int i = 0; i < 3; i++) {
+                        RolledSSB rolledSSB = new RolledSSB{ User = userGame};
+                        _context.RolledSSBs.Add(rolledSSB);
+                    }
+                    Bird nullBird = new Bird {
+                        Id = 999, 
+                        Rarity = 999, 
+                        Name="empty bird", 
+                        Description="Empty bird"
+                    };
+                    for (int i = 0; i < 7; i++) {
+                        SideShopBird sideShopBird = 
+                            new SideShopBird{ 
+                                User = userGame,
+                                Bird = nullBird, 
+                                SlotNum = i
+                            };
+                        _context.SideShopBirds.Add(sideShopBird);
+                    }
+                    _context.SaveChanges();
+                    // END AUGMENTATON
+                    // ***************************************
+                    
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);

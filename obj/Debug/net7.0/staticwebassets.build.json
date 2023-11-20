@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LVCCxxs5UgOeyEYuseYW/qDqLK6fxJjesB/iyANO63w=",
+  "Hash": "JTQ5A89d5YMaHu0fvXOAuuQy2DBhjA8gF58PhPfXcvo=",
   "Source": "BirdGame",
   "BasePath": "_content/BirdGame",
   "Mode": "Default",
@@ -1360,12 +1360,12 @@
       "OriginalItemSpec": "wwwroot\\images\\bird_avatars\\9.jpg"
     },
     {
-      "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\null.jpg",
+      "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\bird_avatars\\999.jpg",
       "SourceId": "BirdGame",
       "SourceType": "Discovered",
       "ContentRoot": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\",
       "BasePath": "_content/BirdGame",
-      "RelativePath": "images/bird_avatars/null.jpg",
+      "RelativePath": "images/bird_avatars/999.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1374,7 +1374,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\bird_avatars\\null.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\bird_avatars\\999.jpg"
     },
     {
       "Identity": "Y:\\School\\Internet Programming\\Ptaszki\\wwwroot\\images\\items\\caterpiller.png",

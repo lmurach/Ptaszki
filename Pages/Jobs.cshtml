@@ -24,7 +24,7 @@
                             <option value="bug-finder">Bug Finder</option> 
                         </select>
                     </div>
-                    <div>+ Stat</div>   
+                    <div>+ Stat</div>
                 </div>
             }
         </div>
@@ -47,24 +47,24 @@
 </div>
 <div class="body-div">
     <div class="view-birds-grid">
-        @foreach (var bird in Model.OwnedBirds) {
-            <div class="view-bird-entry rarity-@(bird.Rarity)">
+        @foreach (var bird in Model.UserGameEntity.OwnedBirds) {
+            <div class="view-bird-entry rarity-@(bird.Bird.Rarity)">
                 <div class="vb-img-container">
-                    <img class="vb-img" src="~/images/bird_avatars/@(bird.Id).jpg">
+                    <img class="vb-img" src="~/images/bird_avatars/@(bird.Bird.Id).jpg">
                 </div>
-                <div class="vb-entry-name">@(bird.Name)</div>
+                <div class="vb-entry-name">@(bird.Bird.Name)</div>
                 <div class="vb-entry-stats-container">
                     <div class="vb-entry-stat">
                         <img class="stat-img" src="~/images/site/strength.png">
-                        @(bird.Strength)
+                        @(bird.Bird.Strength)
                     </div>
                     <div class="vb-entry-stat">
                         <img class="stat-img" src="~/images/site/perception.png">
-                        @(bird.Perception)
+                        @(bird.Bird.Perception)
                     </div>
                     <div class="vb-entry-stat">
                         <img class="stat-img" src="~/images/site/hunting.png">
-                        @(bird.Hunting)
+                        @(bird.Bird.Hunting)
                     </div>
                 </div>
             </div>

@@ -3,6 +3,7 @@ using System;
 using BirdGame.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BirdGame.Migrations
 {
     [DbContext(typeof(BirdDbContext))]
-    partial class BirdDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231120042838_KeyGen")]
+    partial class KeyGen
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -90,7 +93,7 @@ namespace BirdGame.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("RolledSSBs");
+                    b.ToTable("rolledSSBs");
                 });
 
             modelBuilder.Entity("BirdGame.Data.SideShopBird", b =>
@@ -100,9 +103,6 @@ namespace BirdGame.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("BirdId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("SlotNum")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Star")
@@ -118,7 +118,7 @@ namespace BirdGame.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("SideShopBirds");
+                    b.ToTable("sideShopBirds");
                 });
 
             modelBuilder.Entity("BirdGame.Data.UserGame", b =>
@@ -359,7 +359,7 @@ namespace BirdGame.Migrations
                         .IsRequired();
 
                     b.HasOne("BirdGame.Data.UserGame", "User")
-                        .WithMany("RolledSSBs")
+                        .WithMany("rolledSSBs")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -443,9 +443,9 @@ namespace BirdGame.Migrations
                 {
                     b.Navigation("OwnedBirds");
 
-                    b.Navigation("RolledSSBs");
-
                     b.Navigation("SideShopBirds");
+
+                    b.Navigation("rolledSSBs");
                 });
 #pragma warning restore 612, 618
         }

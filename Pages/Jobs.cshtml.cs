@@ -10,6 +10,7 @@ public class JobsModel : PageModel
     private readonly BirdDbContext _context;
     private readonly ILogger<JobsModel> _logger;
 
+    public UserGame UserGameEntity = new UserGame();
     public ICollection<Bird> OwnedBirds { get; set; } = default!;
 
     public JobsModel(BirdDbContext context, ILogger<JobsModel> logger)
@@ -20,7 +21,10 @@ public class JobsModel : PageModel
 
     public async Task OnGetAsync()
     {
-        this.OwnedBirds = await _context.Birds
-            .ToListAsync();
+        UserGameEntity = await _context.UserGames
+            .Include(ug => ug.OwnedBirds)
+                .ThenInclude(bc => bc.Bird)
+            .Where(ug => ug.Id == User.Identity.Name)
+            .SingleAsync();
     }
 }
