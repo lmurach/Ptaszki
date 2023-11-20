@@ -24,4 +24,7 @@ public class BirdDbContext : IdentityDbContext<IdentityUser>
     public DbSet<UserGame> UserGames { get; set; } 
     public DbSet<RolledSSB> RolledSSBs {get; set; }
     public DbSet<SideShopBird> SideShopBirds { get; set; }
+    public DbSet<BasicItem> BasicItems { get; set; } 
+    public DbSet<CraftableItem> CraftableItems {get; set; }
+    public DbSet<ItemRelationship> ItemRelationships { get; set; }
 }

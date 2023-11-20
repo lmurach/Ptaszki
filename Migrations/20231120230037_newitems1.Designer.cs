@@ -3,6 +3,7 @@ using System;
 using BirdGame.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BirdGame.Migrations
 {
     [DbContext(typeof(BirdDbContext))]
-    partial class BirdDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231120230037_newitems1")]
+    partial class newitems1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -119,10 +122,10 @@ namespace BirdGame.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("BasicItemId")
+                    b.Property<int>("BuiltItemId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("CraftableItemId")
+                    b.Property<int>("RequiredItemId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("RequiredNum")
@@ -130,9 +133,9 @@ namespace BirdGame.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BasicItemId");
+                    b.HasIndex("BuiltItemId");
 
-                    b.HasIndex("CraftableItemId");
+                    b.HasIndex("RequiredItemId");
 
                     b.ToTable("ItemRelationships");
                 });
@@ -425,21 +428,21 @@ namespace BirdGame.Migrations
 
             modelBuilder.Entity("BirdGame.Data.ItemRelationship", b =>
                 {
-                    b.HasOne("BirdGame.Data.BasicItem", "BasicItem")
+                    b.HasOne("BirdGame.Data.CraftableItem", "BuiltItem")
                         .WithMany()
-                        .HasForeignKey("BasicItemId")
+                        .HasForeignKey("BuiltItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BirdGame.Data.CraftableItem", "CraftableItem")
+                    b.HasOne("BirdGame.Data.BasicItem", "RequiredItem")
                         .WithMany()
-                        .HasForeignKey("CraftableItemId")
+                        .HasForeignKey("RequiredItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("BasicItem");
+                    b.Navigation("BuiltItem");
 
-                    b.Navigation("CraftableItem");
+                    b.Navigation("RequiredItem");
                 });
 
             modelBuilder.Entity("BirdGame.Data.RolledSSB", b =>
