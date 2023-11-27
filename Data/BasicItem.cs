@@ -10,4 +10,6 @@ public class BasicItem
     [Required]
     [MaxLength(100)]
     public string Name { get; set; } = default!;
+
+    public List<ItemRelationship> itemRelationships { get; set; } = default!;
 }

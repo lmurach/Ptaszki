@@ -17,6 +17,17 @@ public class BirdDbContext : IdentityDbContext<IdentityUser>
         // Customize the ASP.NET Identity model and override the defaults if needed.
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
+
+        builder.Entity<ItemRelationship>()
+            .HasKey(ir => new { ir.BasicItemId, ir.CraftableItemId });  
+        builder.Entity<ItemRelationship>()
+            .HasOne(ir => ir.BasicItem)
+            .WithMany(bi => bi.itemRelationships)
+            .HasForeignKey(ir => ir.BasicItemId);  
+        builder.Entity<ItemRelationship>()
+            .HasOne(ir => ir.CraftableItem)
+            .WithMany(ci => ci.itemRelationships)
+            .HasForeignKey(ir => ir.CraftableItemId);
     }
 
     public DbSet<Bird> Birds { get; set; }
@@ -26,5 +37,5 @@ public class BirdDbContext : IdentityDbContext<IdentityUser>
     public DbSet<SideShopBird> SideShopBirds { get; set; }
     public DbSet<BasicItem> BasicItems { get; set; } 
     public DbSet<CraftableItem> CraftableItems {get; set; }
-    public DbSet<ItemRelationship> ItemRelationships { get; set; }
+    // public DbSet<ItemRelationship> ItemRelationships { get; set; }
 }

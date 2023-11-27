@@ -14,7 +14,6 @@ public class AdoptModel : PageModel
     private readonly ILogger<AdoptModel> _logger;
 
     public UserGame UserGameEntity = new UserGame();
-    public int Seeds { get; set; }
 
     public AdoptModel(BirdDbContext context, ILogger<AdoptModel> logger)
     {

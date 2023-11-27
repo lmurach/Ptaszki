@@ -8,35 +8,22 @@
 
 <div class="body-div">
     <div class="crafting-wrapper">
-        @for (int i = 0; i < 6; i++) {
+        @foreach (var craftItem in Model.CraftableItems) {
             <div class="crafting-entry-box">
-                <img class="item-img" src="~/images/items/upgrade_1.png">
-                <div class="item-name"><h2>Rarity Upgrade 1</h2></div>
+                <img class="item-img" src="~/images/craftableItems/@(craftItem.Id).png">
+                <div class="item-name"><h2>@craftItem.Name</h2></div>
                 <div class="item-left-side">
                     <div class="item-description">
-                        Upgrades the rarity of the sideshop minigame.
+                       @craftItem.Description
                     </div>
                     <div class="item-needs">
-                        <div class="single-item">
-                            <img class="item-need-img" src="~/images/items/sticks.png">
-                            <div class="item-need">Sticks</div>
-                            <div class="item-progress">00/05</div>
-                        </div>
-                        <div class="single-item">
-                            <img class="item-need-img" src="~/images/items/rock.png">
-                            <div class="item-need">Rocks</div>
-                            <div class="item-progress">00/10</div>
-                        </div>
-                        <div class="single-item">
-                            <img class="item-need-img" src="~/images/items/caterpiller.png">
-                            <div class="item-need">Caterpillers</div>
-                            <div class="item-progress">00/04</div>
-                        </div>
-                        <div class="single-item">
-                            <img class="item-need-img" src="~/images/items/feather.png">
-                            <div class="item-need">Feathers</div>
-                            <div class="item-progress">00/15</div>
-                        </div>
+                        @foreach (var IR in craftItem.itemRelationships){
+                            <div class="single-item">
+                                <img class="item-need-img" src="~/images/basicItems/@(IR.BasicItem.Id).png">
+                                <div class="item-need">@IR.BasicItem.Name</div>
+                                <div class="item-progress">00/@IR.RequiredNum</div>
+                            </div>
+                        }
                     </div>
                 </div>
                 <div class="item-right-side">

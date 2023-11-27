@@ -15,5 +15,5 @@ public class CraftableItem
     [MaxLength(500)]
     public string Description { get; set; } = default!;
 
-    public List<BasicItem> BasicItems { get; set; } = new List<BasicItem>();
+    public List<ItemRelationship> itemRelationships { get; set; } = new List<ItemRelationship>();
 }

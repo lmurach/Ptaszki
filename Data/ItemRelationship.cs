@@ -8,8 +8,10 @@ public class ItemRelationship
     [DatabaseGenerated(DatabaseGeneratedOption.Identity), Key()]
     public int Id { get; set; }
 
+    public int CraftableItemId { get; set; }
     public CraftableItem CraftableItem { get; set; } = default!;
 
+    public int BasicItemId { get; set; }
     public BasicItem BasicItem { get; set; } = default!;
 
     [Required]
