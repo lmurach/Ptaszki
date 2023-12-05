@@ -21,7 +21,20 @@
                             <div class="single-item">
                                 <img class="item-need-img" src="~/images/basicItems/@(IR.BasicItem.Id).png">
                                 <div class="item-need">@IR.BasicItem.Name</div>
-                                <div class="item-progress">00/@IR.RequiredNum</div>
+                                @{bool flag = false;}
+                                @foreach (var UIR in Model.UserGameEntity.userIRs) {
+                                    @if (UIR.BasicItem.Name == IR.BasicItem.Name) {
+                                        <div class="item-progress">
+                                            @(UIR.OwnedNum)/@IR.RequiredNum
+                                        </div>
+                                        flag = true;
+                                    }
+                                }
+                                @if (flag == false) {
+                                        <div class="item-progress">
+                                            0/@IR.RequiredNum
+                                        </div>
+                                }
                             </div>
                         }
                     </div>

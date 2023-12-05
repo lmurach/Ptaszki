@@ -3,6 +3,7 @@ using System;
 using BirdGame.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BirdGame.Migrations
 {
     [DbContext(typeof(BirdDbContext))]
-    partial class BirdDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231127230518_jobBird")]
+    partial class jobBird
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -485,7 +488,7 @@ namespace BirdGame.Migrations
                         .IsRequired();
 
                     b.HasOne("BirdGame.Data.UserGame", "User")
-                        .WithMany("jobBirds")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -618,8 +621,6 @@ namespace BirdGame.Migrations
             modelBuilder.Entity("BirdGame.Data.UserGame", b =>
                 {
                     b.Navigation("OwnedBirds");
-
-                    b.Navigation("jobBirds");
 
                     b.Navigation("rolledSSBs");
 

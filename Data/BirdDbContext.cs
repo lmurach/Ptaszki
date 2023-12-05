@@ -28,14 +28,28 @@ public class BirdDbContext : IdentityDbContext<IdentityUser>
             .HasOne(ir => ir.CraftableItem)
             .WithMany(ci => ci.itemRelationships)
             .HasForeignKey(ir => ir.CraftableItemId);
+
+
+        builder.Entity<UserIR>()
+            .HasKey(ir => new { ir.UserGameId, ir.BasicItemId });  
+        builder.Entity<UserIR>()
+            .HasOne(ir => ir.BasicItem)
+            .WithMany(bi => bi.userIRs)
+            .HasForeignKey(ir => ir.BasicItemId);  
+        builder.Entity<UserIR>()
+            .HasOne(ir => ir.UserGame)
+            .WithMany(ug => ug.userIRs)
+            .HasForeignKey(ir => ir.UserGameId);
     }
 
     public DbSet<Bird> Birds { get; set; }
     public DbSet<BirdConnector> BirdConnectors { get; set; } 
     public DbSet<UserGame> UserGames { get; set; } 
-    public DbSet<RolledSSB> RolledSSBs {get; set; }
+    public DbSet<RolledSSB> RolledSSBs { get; set; }
     public DbSet<SideShopBird> SideShopBirds { get; set; }
     public DbSet<BasicItem> BasicItems { get; set; } 
-    public DbSet<CraftableItem> CraftableItems {get; set; }
+    public DbSet<CraftableItem> CraftableItems { get; set; }
+    public DbSet<JobBird> jobBirds { get; set; }
+    // public DbSet<UserIR> UserIRs { get; set; }
     // public DbSet<ItemRelationship> ItemRelationships { get; set; }
 }

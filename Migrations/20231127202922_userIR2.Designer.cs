@@ -3,6 +3,7 @@ using System;
 using BirdGame.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BirdGame.Migrations
 {
     [DbContext(typeof(BirdDbContext))]
-    partial class BirdDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231127202922_userIR2")]
+    partial class userIR2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -128,32 +131,6 @@ namespace BirdGame.Migrations
                     b.HasIndex("CraftableItemId");
 
                     b.ToTable("ItemRelationship");
-                });
-
-            modelBuilder.Entity("BirdGame.Data.JobBird", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("BirdId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("jobTitle")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BirdId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("jobBirds");
                 });
 
             modelBuilder.Entity("BirdGame.Data.RolledSSB", b =>
@@ -476,25 +453,6 @@ namespace BirdGame.Migrations
                     b.Navigation("CraftableItem");
                 });
 
-            modelBuilder.Entity("BirdGame.Data.JobBird", b =>
-                {
-                    b.HasOne("BirdGame.Data.Bird", "Bird")
-                        .WithMany()
-                        .HasForeignKey("BirdId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BirdGame.Data.UserGame", "User")
-                        .WithMany("jobBirds")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Bird");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("BirdGame.Data.RolledSSB", b =>
                 {
                     b.HasOne("BirdGame.Data.Bird", "Bird")
@@ -618,8 +576,6 @@ namespace BirdGame.Migrations
             modelBuilder.Entity("BirdGame.Data.UserGame", b =>
                 {
                     b.Navigation("OwnedBirds");
-
-                    b.Navigation("jobBirds");
 
                     b.Navigation("rolledSSBs");
 

@@ -20,13 +20,14 @@ public class CraftingModel : PageModel
     }
 
     public async Task OnGetAsync() {
+        UserGameEntity = await _context.UserGames
+            .Include(ug => ug.userIRs)
+                .ThenInclude(ur => ur.BasicItem)
+            .Where(ug => ug.Id == User.Identity.Name)
+            .SingleAsync();
         CraftableItems = await _context.CraftableItems
             .Include(ci => ci.itemRelationships)
                 .ThenInclude(ir => ir.BasicItem)
             .ToListAsync();
-        Console.WriteLine(CraftableItems[0].Name);
-        foreach (var item in CraftableItems[0].itemRelationships) {
-            Console.WriteLine(item.BasicItem.Name);
-        }
     }
 }

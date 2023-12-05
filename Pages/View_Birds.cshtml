@@ -9,7 +9,13 @@
 <div class="body-div">
     <div class="view-birds-grid">
         @foreach (var bird in Model.ListOfBirds) {
-            <div class="view-bird-entry rarity-@(bird.Rarity)">
+            string ownedClass = "bird-not-owned";
+            foreach (var uBird in Model.userGameEntity.OwnedBirds) {
+                if (uBird.Bird.Id == bird.Id) {
+                    ownedClass = "bird-owned";
+                }
+            }
+            <div class="view-bird-entry rarity-@(bird.Rarity) @ownedClass">
                 <div class="vb-img-container">
                     <img class="vb-img" src="~/images/bird_avatars/@(bird.Id).jpg">
                 </div>

@@ -30,3 +30,7 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+.bird-not-owned {
+    opacity: 0.5;
+}

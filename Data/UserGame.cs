@@ -16,4 +16,6 @@ public class UserGame
     public List<BirdConnector> OwnedBirds { get; set; } = new List<BirdConnector>();
     public List<RolledSSB> rolledSSBs { get; set; } = new List<RolledSSB>();
     public List<SideShopBird> sideShopBirds { get; set; } = new List<SideShopBird>();
+    public List<UserIR> userIRs { get; set; } = new List<UserIR>();
+    public List<JobBird> jobBirds { get; set; } = new List<JobBird>();
 }

@@ -152,6 +152,14 @@ namespace BirdGame.Areas.Identity.Pages.Account
                             };
                         _context.SideShopBirds.Add(sideShopBird);
                     }
+                    for (int i = 0; i < 5; i++) {
+                        JobBird jobBird = 
+                            new JobBird {
+                                User = userGame,
+                                Bird = nullBird
+                            };
+                        _context.jobBirds.Add(jobBird);
+                    }
                     _context.SaveChanges();
                     // END AUGMENTATON
                     // ***************************************

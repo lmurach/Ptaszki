@@ -10,6 +10,7 @@ public class ViewBirdsModel : PageModel
     private readonly BirdDbContext _context;
     private readonly ILogger<ViewBirdsModel> _logger;
 
+    public UserGame userGameEntity = new UserGame();
     public ICollection<Bird> ListOfBirds { get; set; } = default!;
 
     public ViewBirdsModel(BirdDbContext context, ILogger<ViewBirdsModel> logger)
@@ -20,7 +21,12 @@ public class ViewBirdsModel : PageModel
 
     public async Task OnGetAsync()
     {
-        this.ListOfBirds = await _context.Birds
+        userGameEntity = await _context.UserGames
+            .Include(ug => ug.OwnedBirds)
+                .ThenInclude(ob => ob.Bird)
+            .Where(ug => ug.Id == User.Identity.Name)
+            .SingleAsync();
+        ListOfBirds = await _context.Birds
             .Where(b => b.Id != 999)
             .ToListAsync();
     }

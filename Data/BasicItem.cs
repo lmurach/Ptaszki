@@ -12,4 +12,5 @@ public class BasicItem
     public string Name { get; set; } = default!;
 
     public List<ItemRelationship> itemRelationships { get; set; } = default!;
+    public List<UserIR> userIRs { get; set; } = default!;
 }

@@ -13,19 +13,21 @@
         <div class="job-birds-bar">
             @for(int i = 0; i < 5; i++) {
                 <div class="job-birds-entry">
-                    <img class="job-bird-img" src="~/images/bird_avatars/null.jpg">
-                    <div class="job-dropdowns">
-                        <label for="job-titles">Choose job:</label> 
-                        <select name="job-titles" id="job-titles"> 
-                            <option value="seed-collector">Seed collector</option> 
-                            <option value="hunter">Hunter</option> 
-                            <option value="rock-breaker">Rock Breaker</option> 
-                            <option value="gatherer">Gatherer</option> 
-                            <option value="feather-fetcher">Feather Fetcher</option>
-                            <option value="bug-finder">Bug Finder</option> 
-                        </select>
-                    </div>
-                    <div>+ Stat</div>
+                    <img class="job-bird-img" src="~/images/bird_avatars/@(Model.UserGameEntity.jobBirds[i].Bird.Id).jpg">
+                    @if (Model.UserGameEntity.jobBirds[i].Bird.Id != 999) {
+                        <div class="job-dropdowns">
+                            <label for="job-titles">Choose job:</label> 
+                            <select name="job-titles" id="job-titles"> 
+                                <option value="seed-collector">Seed collector</option> 
+                                <option value="hunter">Hunter</option> 
+                                <option value="rock-breaker">Rock Breaker</option> 
+                                <option value="gatherer">Gatherer</option> 
+                                <option value="feather-fetcher">Feather Fetcher</option>
+                                <option value="bug-finder">Bug Finder</option> 
+                            </select>
+                        </div>
+                        <div>+ Stat</div>
+                    }
                 </div>
             }
         </div>
@@ -48,27 +50,35 @@
 </div>
 <div class="body-div">
     <div class="view-birds-grid">
-        @foreach (var bird in Model.UserGameEntity.OwnedBirds) {
-            <div class="view-bird-entry rarity-@(bird.Bird.Rarity)">
-                <div class="vb-img-container">
-                    <img class="vb-img" src="~/images/bird_avatars/@(bird.Bird.Id).jpg">
+        @foreach (var birdConn in Model.UserGameEntity.OwnedBirds) {
+            bool ownedFlag = false;
+            foreach (var uBird in Model.UserGameEntity.jobBirds) {
+                if (uBird.Bird.Id == birdConn.Bird.Id) {
+                    ownedFlag = true;
+                }
+            }
+            if (!ownedFlag) {
+                <div class="view-bird-entry rarity-@(birdConn.Bird.Rarity)">
+                    <div class="vb-img-container">
+                        <img class="vb-img" src="~/images/bird_avatars/@(birdConn.Bird.Id).jpg">
+                    </div>
+                    <div class="vb-entry-name">@(birdConn.Bird.Name)</div>
+                    <div class="vb-entry-stats-container">
+                        <div class="vb-entry-stat">
+                            <img class="stat-img" src="~/images/site/strength.png">
+                            @(birdConn.Bird.Strength)
+                        </div>
+                        <div class="vb-entry-stat">
+                            <img class="stat-img" src="~/images/site/perception.png">
+                            @(birdConn.Bird.Perception)
+                        </div>
+                        <div class="vb-entry-stat">
+                            <img class="stat-img" src="~/images/site/hunting.png">
+                            @(birdConn.Bird.Hunting)
+                        </div>
+                    </div>
                 </div>
-                <div class="vb-entry-name">@(bird.Bird.Name)</div>
-                <div class="vb-entry-stats-container">
-                    <div class="vb-entry-stat">
-                        <img class="stat-img" src="~/images/site/strength.png">
-                        @(bird.Bird.Strength)
-                    </div>
-                    <div class="vb-entry-stat">
-                        <img class="stat-img" src="~/images/site/perception.png">
-                        @(bird.Bird.Perception)
-                    </div>
-                    <div class="vb-entry-stat">
-                        <img class="stat-img" src="~/images/site/hunting.png">
-                        @(bird.Bird.Hunting)
-                    </div>
-                </div>
-            </div>
+            }
         }
     </div>
 </div>

@@ -24,6 +24,8 @@ public class JobsModel : PageModel
         UserGameEntity = await _context.UserGames
             .Include(ug => ug.OwnedBirds)
                 .ThenInclude(bc => bc.Bird)
+            .Include(ug => ug.jobBirds)
+                .ThenInclude(jb => jb.Bird)
             .Where(ug => ug.Id == User.Identity.Name)
             .SingleAsync();
     }
