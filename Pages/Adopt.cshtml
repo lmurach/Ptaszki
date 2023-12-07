@@ -52,6 +52,7 @@
         <div class="side-shop-reroll">
             <form method="post" asp-page-handler="Reroll">
                 <input type="hidden" asp-for="UserGameEntity.Id"/>
+                <input type="hidden" asp-for="UserGameEntity.Seeds"/>
                 <button id="reroll-button">Reroll</button>
             </form>
             <div class="reroll-price">
