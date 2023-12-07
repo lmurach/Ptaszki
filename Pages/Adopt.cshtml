@@ -5,6 +5,7 @@
 }
 
 <link rel="stylesheet" href="~/css/adopt.css" asp-append-version="true" />
+<script src="~/js/adopt.js"></script>
 
 <div class="body-div">
     <div class="adopt-game-wrapper">
@@ -43,13 +44,16 @@
         <div class="side-shop-bar">
             @for(int i = 0; i < 7; i++) {
                 <div class="side-shop-entry">
-                    <img class="side-shop-img" 
+                    <img class="side-shop-img"
                     src="~/images/bird_avatars/@(Model.UserGameEntity.sideShopBirds[i].Bird.Id).jpg">
                 </div>
             }
         </div>
         <div class="side-shop-reroll">
-            <button>Reroll</button>
+            <form method="post" asp-page-handler="Reroll">
+                <input type="hidden" asp-for="UserGameEntity.Id"/>
+                <button id="reroll-button">Reroll</button>
+            </form>
             <div class="reroll-price">
                 <img class="seed-img" src="~/images/site/seed.jpg">
                 <div class="ss-reroll">2</div>

@@ -33,4 +33,17 @@ public class AdoptModel : PageModel
             .Where(ug => ug.Id == User.Identity.Name)
             .SingleAsync();
     }
+
+    public IActionResult OnPostReroll(UserGame ug) {
+        Console.WriteLine(ug.Id);
+        Console.WriteLine(UserGameEntity.Id);
+        // if (UserGameEntity.Seeds >= 2) {
+        //     UserGameEntity.Seeds -= 2;
+        //     _context.UserGames.Update(UserGameEntity);
+        //     _context.SaveChanges();
+        //     // Reroll();
+        //     return Page();
+        // }
+        return Page();
+    }
 }

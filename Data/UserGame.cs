@@ -7,7 +7,7 @@ public class UserGame
 {
     [Key]
     [Column(TypeName = "text")]
-    public string Id { get; set; } = default!;
+    public string? Id { get; set; } = default!;
 
     public int Seeds { get; set; } = 100;
 
