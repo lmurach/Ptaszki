@@ -10,6 +10,10 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddHttpContextAccessor();
+
+// ADD CONTROLLERS TO SUPPORT AJAX / RESTFUL API
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -29,5 +33,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+// ADD CONTROLLERS TO SUPPORT AJAX / RESTFUL API
+app.MapControllers();
 
 app.Run();

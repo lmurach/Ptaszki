@@ -131,7 +131,7 @@ namespace BirdGame.Areas.Identity.Pages.Account
                     UserGame userGame = new UserGame {Id = user.UserName};
                     _context.UserGames.Add(userGame);
                     for (int i = 0; i < 3; i++) {
-                        RolledSSB rolledSSB = new RolledSSB{ User = userGame};
+                        RolledSSB rolledSSB = new RolledSSB{ User = userGame, SlotNum = i};
                         _context.RolledSSBs.Add(rolledSSB);
                     }
                     // Bird nullBird = new Bird {

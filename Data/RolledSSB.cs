@@ -13,4 +13,6 @@ public class RolledSSB
 
     [Required]
     public Bird Bird { get; set; } = default!;
+
+    public int SlotNum { get; set; }
 }

@@ -27,16 +27,22 @@ public class AdoptModel : PageModel
         UserGameEntity = await _context.UserGames
             .Include(ug => ug.OwnedBirds)
                 .ThenInclude(bc => bc.Bird)
-            .Include(ug => ug.rolledSSBs)
+            .Include(ug => ug.rolledSSBs.OrderBy(r => r.SlotNum))
                 .ThenInclude(bc => bc.Bird)
-            .Include(ug => ug.sideShopBirds)
+            .Include(ug => ug.sideShopBirds.OrderBy(ss => ss.SlotNum))
                 .ThenInclude(bc => bc.Bird)
             .Where(ug => ug.Id == User.Identity.Name)
             .SingleAsync();
     }
 
     public IActionResult OnPostReroll() {
-        Console.WriteLine(UserGameEntity.Id);
+        List<SideShopBird> uBirds = _context.SideShopBirds
+            .Include(sb => sb.Bird)
+            .Where(sb => sb.User.Id == UserGameEntity.Id && sb.Bird.Id != 999)
+            .ToList();
+        if (uBirds.Count >= 7) {
+            return Page();
+        }
         if (UserGameEntity.Seeds >= 2) {
             UserGameEntity.Seeds -= 2;
             _context.Entry(UserGameEntity).State = EntityState.Modified;
@@ -44,7 +50,7 @@ public class AdoptModel : PageModel
             Reroll();
             return Redirect("./Adopt");
         }
-        return Redirect("./Adopt");
+        return Page();
     }
 
     public void Reroll() {
@@ -86,7 +92,7 @@ public class AdoptModel : PageModel
         _context.SaveChanges();
         for (int i = 0; i < 3; i++) {
             Bird newBird = getBird(getRarity());
-            _context.Add(new RolledSSB {User = UserGameEntity, Bird = newBird});
+            _context.Add(new RolledSSB {User = UserGameEntity, Bird = newBird, SlotNum = i});
         }
         _context.SaveChanges();
     }

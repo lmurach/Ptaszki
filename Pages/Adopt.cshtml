@@ -5,7 +5,6 @@
 }
 
 <link rel="stylesheet" href="~/css/adopt.css" asp-append-version="true" />
-<script src="~/js/adopt.js"></script>
 
 <div class="body-div">
     <div class="adopt-game-wrapper">
@@ -34,7 +33,7 @@
                 <div class="adopt-description">
                     @Model.UserGameEntity.rolledSSBs[i].Bird.Description
                 </div>
-                <button>Adopt</button>
+                <button class="adopt-button" id="adopt-button-@i">Adopt</button>
             </div>
         }
     </div>
@@ -62,4 +61,6 @@
         </div>
     </div>
 </div>
+
+<script src="~/js/adopt.js"></script>
 
