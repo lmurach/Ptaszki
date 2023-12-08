@@ -16,4 +16,5 @@ public class CraftableItem
     public string Description { get; set; } = default!;
 
     public List<ItemRelationship> itemRelationships { get; set; } = new List<ItemRelationship>();
+    public List<UserCraftItem> userCraftItems { get; set; } = new List<UserCraftItem>();
 }

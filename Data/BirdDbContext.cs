@@ -40,6 +40,17 @@ public class BirdDbContext : IdentityDbContext<IdentityUser>
             .HasOne(ir => ir.UserGame)
             .WithMany(ug => ug.userIRs)
             .HasForeignKey(ir => ir.UserGameId);
+
+        builder.Entity<UserCraftItem>()
+            .HasKey(uc => new { uc.UserGameId, uc.CraftableItemId });  
+        builder.Entity<UserCraftItem>()
+            .HasOne(uc => uc.CraftableItem)
+            .WithMany(ci => ci.userCraftItems)
+            .HasForeignKey(uc => uc.CraftableItemId);  
+        builder.Entity<UserCraftItem>()
+            .HasOne(uc => uc.UserGame)
+            .WithMany(ug => ug.userCraftItems)
+            .HasForeignKey(uc => uc.UserGameId);
     }
 
     public DbSet<Bird> Birds { get; set; }

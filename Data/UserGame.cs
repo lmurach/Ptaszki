@@ -18,4 +18,5 @@ public class UserGame
     public List<SideShopBird> sideShopBirds { get; set; } = new List<SideShopBird>();
     public List<UserIR> userIRs { get; set; } = new List<UserIR>();
     public List<JobBird> jobBirds { get; set; } = new List<JobBird>();
+    public List<UserCraftItem> userCraftItems { get; set; } = new List<UserCraftItem>();
 }

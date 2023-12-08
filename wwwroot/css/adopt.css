@@ -68,6 +68,10 @@
     bottom: 8px;
 }
 
+.ss-reroll {
+    margin-top: 8px;
+    font-size: 1.2rem;
+}
 
 .side-shop-reroll {
     float: right;
