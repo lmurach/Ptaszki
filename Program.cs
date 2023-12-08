@@ -15,6 +15,10 @@ builder.Services.AddHttpContextAccessor();
 // ADD CONTROLLERS TO SUPPORT AJAX / RESTFUL API
 builder.Services.AddControllers();
 
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

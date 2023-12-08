@@ -5,6 +5,11 @@
     border-width: thick;
     margin: 20px 0px;
 }
+
+.empty-bird {
+    background-color: rgb(53, 52, 52);
+}
+
 .adopt-img {
     height: 130px;
     width: 130px;
@@ -43,6 +48,26 @@
     width: 70px;
     height: 70px;
 }
+
+.side-shop-entry {
+    position: relative;
+}
+
+.ss-star {
+    position: absolute;
+    width: 20px;
+}
+
+.ss-star-1 {
+    right: 5px;
+    bottom: 8px;
+}
+
+.ss-star-2 {
+    right: 30px;
+    bottom: 8px;
+}
+
 
 .side-shop-reroll {
     float: right;

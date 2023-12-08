@@ -36,13 +36,6 @@ public class AdoptModel : PageModel
     }
 
     public IActionResult OnPostReroll() {
-        List<SideShopBird> uBirds = _context.SideShopBirds
-            .Include(sb => sb.Bird)
-            .Where(sb => sb.User.Id == UserGameEntity.Id && sb.Bird.Id != 999)
-            .ToList();
-        if (uBirds.Count >= 7) {
-            return Page();
-        }
         if (UserGameEntity.Seeds >= 2) {
             UserGameEntity.Seeds -= 2;
             _context.Entry(UserGameEntity).State = EntityState.Modified;
@@ -50,7 +43,7 @@ public class AdoptModel : PageModel
             reroll();
             return Redirect("./Adopt");
         }
-        return Page();
+        return Redirect("./Adopt");
     }
 
     void reroll() {

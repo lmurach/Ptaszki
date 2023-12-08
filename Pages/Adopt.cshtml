@@ -9,32 +9,37 @@
 <div class="body-div">
     <div class="adopt-game-wrapper">
         @for (int i = 0; i < 3; i++) {
-            <div class="adopt-entry rarity-@Model.UserGameEntity.rolledSSBs[i].Bird.Rarity">
-                <img class="adopt-img" src="~/images/bird_avatars/@(Model.UserGameEntity.rolledSSBs[i].Bird.Id).jpg">
-                <div class="adopt-name">
-                    <h2>@Model.UserGameEntity.rolledSSBs[i].Bird.Name</h2>
+            if(Model.UserGameEntity.rolledSSBs[i].Bird.Id == 999) {
+                <div class="adopt-entry empty-bird"></div>
+            }
+            else {
+                <div class="adopt-entry rarity-@Model.UserGameEntity.rolledSSBs[i].Bird.Rarity">
+                    <img class="adopt-img" src="~/images/bird_avatars/@(Model.UserGameEntity.rolledSSBs[i].Bird.Id).jpg">
+                    <div class="adopt-name">
+                        <h2>@Model.UserGameEntity.rolledSSBs[i].Bird.Name</h2>
+                    </div>
+                    <div class="adopt-stats">
+                        <ul>
+                            <li>
+                                <img class="stat-img" src="~/images/site/strength.png">
+                                Strength: @Model.UserGameEntity.rolledSSBs[i].Bird.Strength
+                            </li>
+                            <li>
+                                <img class="stat-img" src="~/images/site/perception.png">
+                                Perception: @Model.UserGameEntity.rolledSSBs[i].Bird.Perception
+                            </li>
+                            <li>
+                                <img class="stat-img" src="~/images/site/hunting.png">
+                                Hunting: @Model.UserGameEntity.rolledSSBs[i].Bird.Hunting
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="adopt-description">
+                        @Model.UserGameEntity.rolledSSBs[i].Bird.Description
+                    </div>
+                    <button class="adopt-button" id="adopt-button-@i">Adopt</button>
                 </div>
-                <div class="adopt-stats">
-                    <ul>
-                        <li>
-                            <img class="stat-img" src="~/images/site/strength.png">
-                            Strength: @Model.UserGameEntity.rolledSSBs[i].Bird.Strength
-                        </li>
-                        <li>
-                            <img class="stat-img" src="~/images/site/perception.png">
-                            Perception: @Model.UserGameEntity.rolledSSBs[i].Bird.Perception
-                        </li>
-                        <li>
-                            <img class="stat-img" src="~/images/site/hunting.png">
-                            Hunting: @Model.UserGameEntity.rolledSSBs[i].Bird.Hunting
-                        </li>
-                    </ul>
-                </div>
-                <div class="adopt-description">
-                    @Model.UserGameEntity.rolledSSBs[i].Bird.Description
-                </div>
-                <button class="adopt-button" id="adopt-button-@i">Adopt</button>
-            </div>
+            }
         }
     </div>
 </div>
@@ -45,6 +50,12 @@
                 <div class="side-shop-entry">
                     <img class="side-shop-img"
                     src="~/images/bird_avatars/@(Model.UserGameEntity.sideShopBirds[i].Bird.Id).jpg">
+                    @if(Model.UserGameEntity.sideShopBirds[i].Bird.Id != 999) {
+                        <img class="ss-star ss-star-1" src="~/images/site/star.png">
+                    }
+                    @if(Model.UserGameEntity.sideShopBirds[i].Star == 2) {
+                        <img class="ss-star ss-star-2" src="~/images/site/star.png">
+                    }
                 </div>
             }
         </div>
