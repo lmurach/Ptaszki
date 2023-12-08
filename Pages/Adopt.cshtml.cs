@@ -47,13 +47,13 @@ public class AdoptModel : PageModel
             UserGameEntity.Seeds -= 2;
             _context.Entry(UserGameEntity).State = EntityState.Modified;
             _context.SaveChanges();
-            Reroll();
+            reroll();
             return Redirect("./Adopt");
         }
         return Page();
     }
 
-    public void Reroll() {
+    void reroll() {
         assignNewSSBirds();
     }
 
