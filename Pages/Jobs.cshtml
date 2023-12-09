@@ -58,7 +58,7 @@
                 }
             }
             if (!ownedFlag) {
-                <div class="view-bird-entry rarity-@(birdConn.Bird.Rarity)">
+                <div class="view-bird-entry rarity-@(birdConn.Bird.Rarity)" id="view-bird-@(birdConn.Bird.Id)">
                     <div class="vb-img-container">
                         <img class="vb-img" src="~/images/bird_avatars/@(birdConn.Bird.Id).jpg">
                     </div>
@@ -82,3 +82,5 @@
         }
     </div>
 </div>
+
+<script src="~/js/jobs.js"></script>

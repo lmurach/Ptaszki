@@ -1,4 +1,5 @@
 using BirdGame.Data;
+using BirdGame.ControllerData;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NuGet.Protocol;
@@ -150,25 +151,38 @@ public class AdoptController : ControllerBase
         return 0;
     }
 
-    void combineBirds(int star, List<int> wC1, List<int> wC2, Bird bird, Bird nullBird, UserGame UserGameEntity) {
+    void combineSetup(UserGame UserGameEntity, Bird bird) {
         _context.SideShopBirds.RemoveRange(_context.SideShopBirds
             .Where(ss => ss.User.Id == UserGameEntity.Id
                 && ss.Bird.Id == bird.Id
-                && ss.Star == 1));
-        int emptyIndex = findEmptyIndex(UserGameEntity);
-        if (star == 1) {
-            _context.SideShopBirds.RemoveRange(_context.SideShopBirds
+                && ss.Star == 1));   
+    }
+
+    void oneStarCombine(UserGame UserGameEntity, Bird bird, List<int> wC1, Bird nullBird) {
+        _context.SideShopBirds.RemoveRange(_context.SideShopBirds
             .Where(ss => ss.User.Id == UserGameEntity.Id
-                && ss.SlotNum == emptyIndex));
+                && ss.SlotNum == wC1[0]));
             _context.Add(new SideShopBird {
                 User = UserGameEntity,
                 Bird = bird,
                 Star = 2,
-                SlotNum = emptyIndex
+                SlotNum = wC1[0]
             });
-        }
-        else {
-            _context.SideShopBirds.RemoveRange(_context.SideShopBirds
+            foreach (int combineIndex in wC1) {
+                if (combineIndex != wC1[0]) {
+                    _context.Add(new SideShopBird {
+                        User = UserGameEntity,
+                        Bird = nullBird,
+                        SlotNum = combineIndex
+                    });
+                }
+            }
+    }
+
+    void twoStarCombine(UserGame UserGameEntity, Bird bird, 
+        List<int> wC1, List<int> wC2, Bird nullBird) 
+        {
+        _context.SideShopBirds.RemoveRange(_context.SideShopBirds
             .Where(ss => ss.User.Id == UserGameEntity.Id
                 && ss.Bird.Id == bird.Id
                 && ss.Star == 2));
@@ -183,15 +197,24 @@ public class AdoptController : ControllerBase
                     SlotNum = combineIndex
                 });
             }
-        }
-        foreach (int combineIndex in wC1) {
-            if (combineIndex != emptyIndex) {
+            foreach (int combineIndex in wC1) {
                 _context.Add(new SideShopBird {
                     User = UserGameEntity,
                     Bird = nullBird,
                     SlotNum = combineIndex
                 });
             }
+    }
+
+    void combineBirds(int star, List<int> wC1, List<int> wC2, 
+        Bird bird, Bird nullBird, UserGame UserGameEntity) 
+        {
+        combineSetup(UserGameEntity, bird);
+        if (star == 1) {
+            oneStarCombine(UserGameEntity, bird, wC1, nullBird);
+        }
+        else {
+            twoStarCombine(UserGameEntity, bird, wC1, wC2, nullBird);
         }
     }
 }

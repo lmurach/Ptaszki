@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace BirdGame.Data;
+namespace BirdGame.ControllerData;
 
 public class AdoptButton
 {
