@@ -14,5 +14,14 @@ public class JobBird
     [Required]
     public Bird Bird { get; set; } = default!;
 
-    public string jobTitle { get; set; } = "gatherer";
+    public string JobTitle { get; set; } = "gatherer";
+
+    public int SlotNum { get; set; }
+
+    public int JS_SeedCollector { get; set; }
+    public int JS_RockBreaker { get; set; }
+    public int JS_Gatherer { get; set; }
+    public int JS_Hunter { get; set; }
+    public int JS_FeatherFeatcher { get; set; }
+    public int JS_BugFinder { get; set; }
 }

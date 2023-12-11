@@ -13,10 +13,14 @@ public class UserGame
 
     public int RarityUpgrade { get; set; } = default!;
 
+    [Column(TypeName="Date")]
+    public DateTime LastDailyRoll { get; set; } = default!;
+
     public List<BirdConnector> OwnedBirds { get; set; } = new List<BirdConnector>();
     public List<RolledSSB> rolledSSBs { get; set; } = new List<RolledSSB>();
     public List<SideShopBird> sideShopBirds { get; set; } = new List<SideShopBird>();
     public List<UserIR> userIRs { get; set; } = new List<UserIR>();
     public List<JobBird> jobBirds { get; set; } = new List<JobBird>();
     public List<UserCraftItem> userCraftItems { get; set; } = new List<UserCraftItem>();
+    public List<Yield> Yields { get; set; } = new List<Yield>();
 }

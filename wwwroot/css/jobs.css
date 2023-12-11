@@ -1,3 +1,7 @@
+select {
+    width: 120px;
+}
+
 .job-birds-bar {
     display: flex;
     justify-content: space-evenly;
@@ -18,12 +22,16 @@
     width: 150px;
 }
 
-.yeild-box {
-    
-}
-
 .yeild-text {
     text-align: center;
+}
+
+.yield-text-box {
+    margin-bottom: 20px;
+}
+
+.yield-fill-box {
+    margin-top: 5px;
 }
 
 .output-text {

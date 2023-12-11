@@ -3,6 +3,7 @@ using System;
 using BirdGame.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BirdGame.Migrations
 {
     [DbContext(typeof(BirdDbContext))]
-    partial class BirdDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231210215734_jobskills2")]
+    partial class jobskills2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -23,17 +26,10 @@ namespace BirdGame.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("JobAssociation")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("rarity")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -146,24 +142,6 @@ namespace BirdGame.Migrations
                     b.Property<int>("BirdId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("JS_BugFinder")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("JS_FeatherFeatcher")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("JS_Gatherer")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("JS_Hunter")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("JS_RockBreaker")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("JS_SeedCollector")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("JobTitle")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -261,9 +239,6 @@ namespace BirdGame.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("LastDailyRoll")
-                        .HasColumnType("Date");
-
                     b.Property<int>("RarityUpgrade")
                         .HasColumnType("INTEGER");
 
@@ -295,38 +270,6 @@ namespace BirdGame.Migrations
                     b.HasIndex("BasicItemId");
 
                     b.ToTable("UserIR");
-                });
-
-            modelBuilder.Entity("BirdGame.Data.Yield", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Amount")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("BasicItemName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("BirdId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("Date");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BirdId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Yields");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -656,25 +599,6 @@ namespace BirdGame.Migrations
                     b.Navigation("UserGame");
                 });
 
-            modelBuilder.Entity("BirdGame.Data.Yield", b =>
-                {
-                    b.HasOne("BirdGame.Data.Bird", "Bird")
-                        .WithMany()
-                        .HasForeignKey("BirdId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BirdGame.Data.UserGame", "User")
-                        .WithMany("Yields")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Bird");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -743,8 +667,6 @@ namespace BirdGame.Migrations
             modelBuilder.Entity("BirdGame.Data.UserGame", b =>
                 {
                     b.Navigation("OwnedBirds");
-
-                    b.Navigation("Yields");
 
                     b.Navigation("jobBirds");
 

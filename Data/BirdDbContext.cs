@@ -61,6 +61,7 @@ public class BirdDbContext : IdentityDbContext<IdentityUser>
     public DbSet<BasicItem> BasicItems { get; set; } 
     public DbSet<CraftableItem> CraftableItems { get; set; }
     public DbSet<JobBird> jobBirds { get; set; }
+    public DbSet<Yield> Yields { get; set; }
     // public DbSet<UserIR> UserIRs { get; set; }
     // public DbSet<ItemRelationship> ItemRelationships { get; set; }
 }

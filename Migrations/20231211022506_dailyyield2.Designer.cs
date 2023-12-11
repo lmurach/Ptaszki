@@ -3,6 +3,7 @@ using System;
 using BirdGame.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BirdGame.Migrations
 {
     [DbContext(typeof(BirdDbContext))]
-    partial class BirdDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231211022506_dailyyield2")]
+    partial class dailyyield2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -23,17 +26,10 @@ namespace BirdGame.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("JobAssociation")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
-
-                    b.Property<int>("rarity")
-                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -306,15 +302,8 @@ namespace BirdGame.Migrations
                     b.Property<int>("Amount")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("BasicItemName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("BirdId")
+                    b.Property<int>("BasicItemId")
                         .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("Date");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -322,7 +311,7 @@ namespace BirdGame.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BirdId");
+                    b.HasIndex("BasicItemId");
 
                     b.HasIndex("UserId");
 
@@ -658,19 +647,19 @@ namespace BirdGame.Migrations
 
             modelBuilder.Entity("BirdGame.Data.Yield", b =>
                 {
-                    b.HasOne("BirdGame.Data.Bird", "Bird")
+                    b.HasOne("BirdGame.Data.BasicItem", "BasicItem")
                         .WithMany()
-                        .HasForeignKey("BirdId")
+                        .HasForeignKey("BasicItemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BirdGame.Data.UserGame", "User")
-                        .WithMany("Yields")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Bird");
+                    b.Navigation("BasicItem");
 
                     b.Navigation("User");
                 });
@@ -743,8 +732,6 @@ namespace BirdGame.Migrations
             modelBuilder.Entity("BirdGame.Data.UserGame", b =>
                 {
                     b.Navigation("OwnedBirds");
-
-                    b.Navigation("Yields");
 
                     b.Navigation("jobBirds");
 

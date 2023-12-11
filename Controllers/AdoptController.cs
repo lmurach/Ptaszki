@@ -39,7 +39,7 @@ public class AdoptController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult> PostAdoptAsync(IHttpContextAccessor contextAccessor)
+    public async Task<ActionResult> PostAdoptAsync()
     {
         var reader = new StreamReader( Request.Body );
         string JSON = await reader.ReadToEndAsync();

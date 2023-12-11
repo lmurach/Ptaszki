@@ -156,7 +156,8 @@ namespace BirdGame.Areas.Identity.Pages.Account
                         JobBird jobBird = 
                             new JobBird {
                                 User = userGame,
-                                Bird = nullBird
+                                Bird = nullBird,
+                                SlotNum = i
                             };
                         _context.jobBirds.Add(jobBird);
                     }

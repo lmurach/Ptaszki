@@ -11,6 +11,9 @@ public class BasicItem
     [MaxLength(100)]
     public string Name { get; set; } = default!;
 
+    public string JobAssociation { get; set; } = default!;
+    public int rarity { get; set; } = default!;
+
     public List<ItemRelationship> itemRelationships { get; set; } = default!;
     public List<UserIR> userIRs { get; set; } = default!;
 }

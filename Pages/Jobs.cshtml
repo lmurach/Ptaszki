@@ -4,29 +4,48 @@
     ViewData["Title"] = "Assign Jobs";
 }
 
-<link rel="stylesheet" href="~/css/jobs.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/css/view_birds.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/jobs.css" asp-append-version="true" />
 <script src="~/js/site.js"></script>
 
 <div class="body-div">
     <div class="job-birds-wrapper">
         <div class="job-birds-bar">
             @for(int i = 0; i < 5; i++) {
-                <div class="job-birds-entry">
-                    <img class="job-bird-img" src="~/images/bird_avatars/@(Model.UserGameEntity.jobBirds[i].Bird.Id).jpg">
+                <div class="job-birds-entry" id="jobs-bird-@i">
+                    <img class="job-bird-img" 
+                    src="~/images/bird_avatars/@(Model.UserGameEntity.jobBirds[i].Bird.Id).jpg"
+                    id="bird-img-@(Model.UserGameEntity.jobBirds[i].Bird.Id)">
                     @if (Model.UserGameEntity.jobBirds[i].Bird.Id != 999) {
                         <div class="job-dropdowns">
                             <label for="job-titles">Choose job:</label> 
-                            <select name="job-titles" id="job-titles"> 
-                                <option value="seed-collector">Seed collector</option> 
-                                <option value="hunter">Hunter</option> 
-                                <option value="rock-breaker">Rock Breaker</option> 
-                                <option value="gatherer">Gatherer</option> 
-                                <option value="feather-fetcher">Feather Fetcher</option>
-                                <option value="bug-finder">Bug Finder</option> 
+                            <select name="job-titles" class="job-titles">
+                                <option value="seed-collector">
+                                    Seed collector 
+                                    (@(Model.UserGameEntity.jobBirds[i].JS_SeedCollector))
+                                </option> 
+                                <option value="hunter">
+                                    Hunter
+                                    (@(Model.UserGameEntity.jobBirds[i].JS_Hunter))
+                                </option> 
+                                <option value="rock-breaker">
+                                    Rock Breaker
+                                    (@(Model.UserGameEntity.jobBirds[i].JS_RockBreaker))
+                                </option> 
+                                <option value="gatherer">
+                                    Gatherer
+                                    (@(Model.UserGameEntity.jobBirds[i].JS_Gatherer))
+                                </option> 
+                                <option value="feather-fetcher">
+                                    Feather Fetcher
+                                    (@(Model.UserGameEntity.jobBirds[i].JS_FeatherFeatcher))
+                                </option>
+                                <option value="bug-finder">
+                                    Bug Finder
+                                    (@(Model.UserGameEntity.jobBirds[i].JS_BugFinder))
+                                </option> 
                             </select>
                         </div>
-                        <div>+ Stat</div>
                     }
                 </div>
             }
@@ -36,18 +55,25 @@
         </div>
     </div>
 </div>
-<div class="body-div">
+<div class="body-div" id="yield-body-div">
     <div class="yeild-box"
-        <h2 class="yeild-text">Yeilds:</h2>
-        <div class="output-text">
-            <p>The northern cardinal gathers 3 sticks and 1 rock.</p>
-            <p>The northern cardinal gathers 3 sticks and 1 rock.</p>
-            <p>The northern cardinal gathers 3 sticks and 1 rock.</p>
-            <p>The northern cardinal gathers 3 sticks and 1 rock.</p>
-            <p>The northern cardinal gathers 3 sticks and 1 rock.</p>
+        <div class="yield-text-box">
+            @if(Model.UserGameEntity.LastDailyRoll == default(DateTime)){
+                <h2 class="yeild-text">Yields:  (Never Submitted Before)</h2>
+            }
+            else {
+                <h2 class="yeild-text">Yields:  @Model.UserGameEntity.LastDailyRoll.ToLongDateString()</h2>
+            }
+        </div>
+        <div class="yield-fill-box">
+            @foreach (var yield in Model.Yields) {
+                <div class="yield">
+                    The <span class="rarity-@yield.Bird.Rarity">@yield.Bird.Name</span> 
+                    found @yield.Amount @(yield.BasicItemName).
+                </div>
+            }     
         </div>
     </div>   
-</div>
 <div class="body-div">
     <div class="view-birds-grid">
         @foreach (var birdConn in Model.UserGameEntity.OwnedBirds) {

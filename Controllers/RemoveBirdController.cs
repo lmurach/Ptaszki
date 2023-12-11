@@ -7,47 +7,47 @@ using Microsoft.Identity;
 using System.Text.Json;
 using System.Net.WebSockets;
 using System.Runtime.Intrinsics.X86;
-using BirdGame.Migrations;
 
 namespace CSCI3600.API;
 
 [ApiController]
 [Route("/api/[controller]")]
-public class PickBirdController : ControllerBase
+public class RemoveBirdController : ControllerBase
 {
-    private readonly ILogger<PickBirdController> _logger;
+    private readonly ILogger<AdoptController> _logger;
     private readonly BirdDbContext _context;
 
-    public PickBirdController(
-        ILogger<PickBirdController> logger,
+    public RemoveBirdController(
+        ILogger<AdoptController> logger,
         BirdDbContext context
     )
     {
         _logger = logger;
         _context = context;
     }
-
+    
     [HttpGet]
-    public async Task<UserGame> GetPickBirdAsync()
+    public async Task<UserGame> GetRemoveBirdAsync()
     {
         return await _context.UserGames
             .Include(ug => ug.OwnedBirds)
                 .ThenInclude(ob => ob.Bird)
             .Include(ug => ug.jobBirds.OrderBy(jb => jb.SlotNum))
-                .ThenInclude(jb => jb.Bird)
+                    .ThenInclude(jb => jb.Bird)
             .Where(ug => ug.Id == User.Identity.Name)
             .SingleAsync();
     }
 
     [HttpPost]
-    public async Task<ActionResult> PostPickBirdAsync()
+    public async Task<ActionResult> PostRemoveBirdAsync()
     {
         var reader = new StreamReader( Request.Body );
         string JSON = await reader.ReadToEndAsync();
-        PickedBird bird = JsonSerializer.Deserialize<PickedBird>(JSON);
-        _logger.LogInformation($"trying to add {bird.birdId}");
-        int birdId = new int();
+        RemovedBird bird = JsonSerializer.Deserialize<RemovedBird>(JSON);
+        int birdId;
+        int birdPosition;
         Int32.TryParse(bird.birdId, out birdId);
+        Int32.TryParse(bird.birdPosition, out birdPosition);
         try
         {
             UserGame UserGameEntity = await _context.UserGames
@@ -57,16 +57,15 @@ public class PickBirdController : ControllerBase
                     .ThenInclude(jb => jb.Bird)
                 .Where(ug => ug.Id == User.Identity.Name)
                 .SingleAsync();
-            Bird pickedBird = await _context.Birds
+            Bird RemovedBird = await _context.Birds
                 .Where(b => b.Id == birdId)
                 .SingleAsync();
-            int index = JobFunctions.FindEmptyJobIndex(UserGameEntity);
-            if (index >= 0) {
-                JobFunctions.RemoveOldBird(UserGameEntity, _context, index);
-                JobBird jobBird = JobFunctions.AddJobBird(
-                    UserGameEntity, pickedBird, _context, index);
-                await _context.SaveChangesAsync();
-            }
+            Bird nullBird = await _context.Birds
+                .Where(b => b.Id == 999)
+                .SingleAsync();
+            JobFunctions.RemoveOldBird(UserGameEntity, _context, birdPosition);
+            JobFunctions.AddJobBird(UserGameEntity, nullBird, _context, birdPosition);
+            await _context.SaveChangesAsync(); 
         }
         catch (Exception ex)
         {
